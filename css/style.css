@@ -1,0 +1,35 @@
+body {
+    background-image: url(../background/marioworld.jpg);
+    background-size: cover;
+}
+
+.bloc1 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.bloc2 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+input {
+    background-color: red;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+}
+
+#screen {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}

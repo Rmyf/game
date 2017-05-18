@@ -1,0 +1,63 @@
+<html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+
+
+    <title>MarioGame</title>
+</head>
+
+<body>
+
+    <section id="screen">
+        <div class="bloc1">
+
+            <section>
+                <div class="health1">
+
+                </div>
+            </section>
+            <input type="button">
+        </div>
+
+
+        <div class="bloc2">
+
+            <section>
+                <div class="health2">
+                </div>
+            </section>
+            <input type="button">
+        </div>
+    </section>
+
+
+
+
+
+    <script>
+        let mario = {
+            vie: 100,
+        };
+
+        let wario = {
+            vie: 100,
+        };
+
+        function attmario() {
+            wario.vie -= 10;
+        }
+
+        function attwario() {
+            mario.vie -= 10;
+        }
+    </script>
+
+</body>
+
+</html>

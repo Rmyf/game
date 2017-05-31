@@ -2,39 +2,56 @@ body {
     background-image: url(../background/marioworld.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-.bloc1 {
-    width: 50%;
-    height: 100%;
+header {
     display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+header section {
+    width: 400px;
+}
+
+#avatarwario {
+    margin-top: 15px;
+    margin-right: 20px;
+}
+
+#avatarmario {
+    margin-left: 20px;
 }
 
 #health1 {
     width: 400px;
-    height: 30px;
+    height: 22px;
     background-color: white;
     border-radius: 80px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
     margin-top: 40px;
-    margin-left: 300px;
+    -moz-box-shadow: 0px 5px 0px 0px #cdffff;
+    -webkit-box-shadow: 0px 5px 0px 0px #cdffff;
+    -o-box-shadow: 0px 5px 0px 0px #cdffff;
+    box-shadow: 0px 5px 0px 0px #cdffff;
+    filter: progid: DXImageTransform.Microsoft.Shadow(color=#cdffff, Direction=180, Strength=0);
+    border-radius: 10px;
 }
 
 #health2 {
     width: 400px;
-    height: 30px;
+    height: 22px;
     background-color: white;
-    border-radius: 80px;
+    border-radius: 100px;
     margin-top: 40px;
     margin-left: 30px;
-}
-
-.bloc2 {
-    width: 50%;
-    height: 100%;
-    display: flex;
+    -moz-box-shadow: 0px 5px 0px 0px #cdffff;
+    -webkit-box-shadow: 0px 5px 0px 0px #cdffff;
+    -o-box-shadow: 0px 5px 0px 0px #cdffff;
+    box-shadow: 0px 5px 0px 0px #cdffff;
+    filter: progid: DXImageTransform.Microsoft.Shadow(color=#cdffff, Direction=180, Strength=0);
+    border-radius: 10px;
 }
 
 input {
@@ -42,22 +59,109 @@ input {
     border-radius: 50px;
     width: 40px;
     height: 40px;
-    display: flex;
-    align-self: flex-end;
 }
 
-.butt {
+main {
+    flex-grow: 1;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: cente_629967r;
 }
 
-.butt2 {
-    display: flex;
-    justify-content: flex-end;
+.perso {
+    height: 193px;
+    width: 100px;
+    animation-name: mario123;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: step-end;
 }
 
-#screen {
-    width: 100%;
+@keyframes mario123 {
+    0% {
+        background-image: url("../images/mario_sprite.png");
+        background-position: 4px -1353px;
+        width: 169px;
+        background-size: 2100px;
+    }
+    18.18% {
+        background-image: url("../images/mario_sprite.png");
+        background-position: -149px 1372px;
+        background-size: 2100px;
+        width: 133px;
+    }
+    27.27% {
+        background-image: url("../images/mario_sprite.png");
+        background-position: -280px 1372px;
+        width: 178px;
+        background-size: 2100px;
+    }
+    36.36% {
+        background-image: url("../images/mario_sprite.png");
+        background-position: -495px 1px;
+        width: 10px;
+        background-size: 2100px;
+    }
+    45.45% {
+        background-image: url("../images/mario_sprite.png");
+        background-position: -699px 1px;
+        width: 10px;
+        background-size: 2100px;
+    }
+    54.54% {
+        background-image: url("../images/mario_sprite.png");
+        background-position: -869px 1px;
+        width: 10px;
+        background-size: 2100px;
+    }
+    63.63% {
+        background-image: url("../images/mario_sprite.png");
+        background-position: -1082px 1px;
+        width: 10px;
+        background-size: 2100px;
+    }
+    72.72% {
+        background-image: url("../images/mario_sprite.png");
+        background-position: -1260px 1px;
+        width: 10px;
+        background-size: 2100px;
+    }
+    81.81% {
+        background-image: url("../images/mario_sprite.png");
+        background-position: -1472px 1px;
+        width: 10px;
+        background-size: 2100px;
+    }
+    90.90% {
+        background-image: url("../images/mario_sprite.png");
+        background-position: -1671px 1px;
+        width: 10px;
+        background-size: 2100px;
+    }
+    100% {
+        background-image: url("../images/mario_sprite.png");
+        background-position: -1865px 1px;
+        width: 10px;
+        background-size: 2100px;
+    }
+}
+
+h1.blink {
+    font-family: pixel;
+    color: black;
+    font-size: 60px;
+    animation: blink 2s infinite;
+    display: none;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+footer {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
 }

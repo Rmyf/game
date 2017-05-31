@@ -13,91 +13,98 @@
 </head>
 
 <body>
-
-
-    <section id="screen">
-
-        <div class="bloc1">
-            <section id="health1">
-
-            </section>
-            <div class="butt">
-                <input id="buttmario" type="button">
+    <header>
+        <img id="avatarmario" src="images/iconmario.png">
+        <section>
+            <div id="health1">
             </div>
-        </div>
+        </section>
 
 
-        <div class="bloc2">
-            <section id="health2">
 
-            </section>
-            <div class="butt2">
-                <input id="buttwario" type="button">
+        <section>
+            <div id="health2">
             </div>
-        </div>
+        </section>
+        <img id="avatarwario" src="images/iconwario.png">
 
-    </section>
+    </header>
+
+    <main>
+        <h1 class="blink">GAME OVER</h1>
+        <div class="perso"></div>
+
+    </main>
+
+    <footer>
+        <input id="buttmario" type="button">
+        <input id="buttwario" type="button">
+
+    </footer>
+</body>
 
 
 
 
+<script>
+    "use strict";
 
-    <script>
-        "use strict";
-
-        let buttmario = document.getElementById('buttmario');
-        let buttwario = document.getElementById('buttwario');
+    let buttmario = document.getElementById('buttmario');
+    let buttwario = document.getElementById('buttwario');
 
 
-        const display = function() {
+    const display = function() {
 
-            let lifeWario = document.querySelector("#health2")
-            lifeWario.style.width = (wario.vie * 4) + "px";
+        let lifeWario = document.querySelector("#health2")
+        lifeWario.style.width = (wario.vie * 4) + "px";
 
-            let lifeMario = document.querySelector("#health1")
-            lifeMario.style.width = (mario.vie * 4) + "px";
+        let lifeMario = document.querySelector("#health1")
+        lifeMario.style.width = (mario.vie * 4) + "px";
+    }
+
+
+    // get .health1
+    // change .health1 content to match mario's health
+    // get .health2
+    // change .health2 content to match wario's health
+
+    const attack = function(perso) {
+        perso.vie -= 10;
+        display();
+        gameover();
+
+    }
+
+    let mario = {
+        name: "Mario",
+        vie: 100,
+    };
+
+
+    let wario = {
+        name: "Wario",
+        vie: 100,
+    };
+
+
+    // attack(wario);
+
+    buttmario.addEventListener("click", function() {
+        attack(wario)
+    });
+
+    buttwario.addEventListener("click", function() {
+        attack(mario)
+
+    });
+
+    function gameover() {
+        if (mario.vie <= 0 || wario.vie <= 0) {
+            document.querySelector(".blink").style.display = "flex";
+
         }
-
-
-
-
-
-
-        // get .health1
-        // change .health1 content to match mario's health
-        // get .health2
-        // change .health2 content to match wario's health
-
-        const attack = function(perso) {
-            perso.vie -= 10;
-            display();
-        }
-
-        let mario = {
-            name: "Mario",
-            vie: 100,
-        };
-
-
-        let wario = {
-            name: "Wario",
-            vie: 100,
-        };
-
-
-        // attack(wario);
-
-        buttmario.addEventListener("click", function() {
-            attack(wario)
-        });
-
-        buttwario.addEventListener("click", function() {
-            attack(mario)
-
-        });
-
-        //
-    </script>
+    }
+</script>
 
 </body>
 

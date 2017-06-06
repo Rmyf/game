@@ -75,71 +75,77 @@ main {
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-timing-function: step-end;
+    image-rendering: pixelated;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-constrast;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: optimize-contrast;
+    -ms-interpolation-mode: nearet-neighbor;
 }
 
 @keyframes mario123 {
     0% {
-        background-image: url("../images/mario_sprite.png");
-        background-position: 4px -1353px;
-        width: 169px;
-        background-size: 2100px;
+        background-image: url("../images/mario.png");
+        background-position: -14957px -1200px;
+        width: 150px;
+        background-size: 1500px;
     }
     18.18% {
-        background-image: url("../images/mario_sprite.png");
-        background-position: -149px 1372px;
-        background-size: 2100px;
-        width: 133px;
+        background-image: url("../images/mario.png");
+        background-position: -15097px -1204px;
+        background-size: 1500px;
+        width: 140px;
     }
     27.27% {
-        background-image: url("../images/mario_sprite.png");
-        background-position: -280px 1372px;
-        width: 178px;
-        background-size: 2100px;
+        background-image: url("../images/mario.png");
+        background-position: -1722px -1403px;
+        width: 130px;
+        background-size: 1500px;
     }
     36.36% {
-        background-image: url("../images/mario_sprite.png");
-        background-position: -495px 1px;
-        width: 10px;
-        background-size: 2100px;
+        background-image: url("../images/mario.png");
+        background-position: -336px 1001px;
+        width: 140px;
+        background-size: 1500px;
     }
     45.45% {
-        background-image: url("../images/mario_sprite.png");
-        background-position: -699px 1px;
-        width: 10px;
-        background-size: 2100px;
+        background-image: url("../images/mario.png");
+        background-position: -469px -994px;
+        width: 140px;
+        background-size: 1500px;
     }
     54.54% {
-        background-image: url("../images/mario_sprite.png");
-        background-position: -869px 1px;
-        width: 10px;
-        background-size: 2100px;
+        background-image: url("../images/mario.png");
+        background-position: -608px 174px;
+        width: 140px;
+        background-size: 1500px;
     }
     63.63% {
-        background-image: url("../images/mario_sprite.png");
-        background-position: -1082px 1px;
-        width: 10px;
-        background-size: 2100px;
+        background-image: url("../images/mario.png");
+        background-position: -742px -168px;
+        width: 140px;
+        background-size: 1500px;
     }
     72.72% {
-        background-image: url("../images/mario_sprite.png");
-        background-position: -1260px 1px;
-        width: 10px;
-        background-size: 2100px;
+        background-image: url("../images/mario.png");
+        background-position: -742px -168px;
+        width: 140px;
+        background-size: 1500px;
     }
     81.81% {
-        background-image: url("../images/mario_sprite.png");
+        background-image: url("../images/mario.png");
         background-position: -1472px 1px;
         width: 10px;
         background-size: 2100px;
     }
     90.90% {
-        background-image: url("../images/mario_sprite.png");
+        background-image: url("../images/mario.png");
         background-position: -1671px 1px;
         width: 10px;
         background-size: 2100px;
     }
     100% {
-        background-image: url("../images/mario_sprite.png");
+        background-image: url("../images/mario.png");
         background-position: -1865px 1px;
         width: 10px;
         background-size: 2100px;

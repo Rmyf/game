@@ -4,6 +4,8 @@ body {
     background-size: 100% 100%;
     display: flex;
     flex-direction: column;
+    background-position: 0 -40px;
+    margin: 0;
 }
 
 header {
@@ -64,15 +66,15 @@ input {
 main {
     flex-grow: 1;
     display: flex;
-    justify-content: center;
-    align-items: cente_629967r;
+    justify-content: flex-start;
+    align-items: flex-end;
 }
 
-.perso {
+.persomario {
     height: 193px;
-    width: 100px;
+    width: 500px;
     animation-name: mario123;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-iteration-count: infinite;
     animation-timing-function: step-end;
     image-rendering: pixelated;
@@ -90,65 +92,47 @@ main {
         width: 150px;
         background-size: 1500px;
     }
-    18.18% {
+    12.5% {
         background-image: url("../images/mario.png");
         background-position: -15097px -1204px;
         background-size: 1500px;
         width: 140px;
     }
-    27.27% {
+    25% {
         background-image: url("../images/mario.png");
         background-position: -1722px -1403px;
         width: 130px;
         background-size: 1500px;
     }
-    36.36% {
+    37.5% {
         background-image: url("../images/mario.png");
-        background-position: -336px 1001px;
+        background-position: -336px -1001px;
         width: 140px;
         background-size: 1500px;
     }
-    45.45% {
+    50% {
         background-image: url("../images/mario.png");
         background-position: -469px -994px;
         width: 140px;
         background-size: 1500px;
     }
-    54.54% {
+    62.5% {
         background-image: url("../images/mario.png");
-        background-position: -608px 174px;
+        background-position: -608px -174px;
         width: 140px;
         background-size: 1500px;
     }
-    63.63% {
+    80% {
         background-image: url("../images/mario.png");
-        background-position: -742px -168px;
+        background-position: -742px -177px;
         width: 140px;
         background-size: 1500px;
     }
-    72.72% {
+    92.5% {
         background-image: url("../images/mario.png");
-        background-position: -742px -168px;
+        background-position: -2388px -175px;
         width: 140px;
         background-size: 1500px;
-    }
-    81.81% {
-        background-image: url("../images/mario.png");
-        background-position: -1472px 1px;
-        width: 10px;
-        background-size: 2100px;
-    }
-    90.90% {
-        background-image: url("../images/mario.png");
-        background-position: -1671px 1px;
-        width: 10px;
-        background-size: 2100px;
-    }
-    100% {
-        background-image: url("../images/mario.png");
-        background-position: -1865px 1px;
-        width: 10px;
-        background-size: 2100px;
     }
 }
 
@@ -167,6 +151,7 @@ h1.blink {
 }
 
 footer {
+    background-color: black;
     display: flex;
     flex-direction: row;
     justify-content: space-around;

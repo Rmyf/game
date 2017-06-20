@@ -13,6 +13,8 @@
     <title>MarioGame</title>
 </head>
 
+<!--<audio src="sound/overworld.mp3" controls autoplay loop></audio>-->
+
 <body>
 
     <header>
@@ -31,19 +33,33 @@
             <img id="avatarwario" src="images/iconwario.png">
         </div>
     </header>
+    <div class="fireball"></div>
+    <div class="littlefire"></div>
+    <div class="lightning">
+        <img src="images/wario_lightning.png" alt="lightning">
+    </div>
+    <div class="littlelightning">
+        <img src="images/littlelightning.png" alt="lightning">
+    </div>
 
     <main>
         <h1 class="blink">GAME OVER</h1>
         <div class="persomario"></div>
-        <div class="fireball"></div>
+
         <div class="persowario"></div>
 
     </main>
 
 
     <footer>
-        <input id="buttmario" type="button">
-        <input id="buttwario" type="button">
+        <input id="buttmario" type="button" value="A">
+        <input id="buttsupwario" type="button" value="B">
+        <input id="buttwario" type="button" value="A">
+        <input id="buttsupmario" type="button" value="B">
+
+
+
+
 
     </footer>
 
@@ -58,6 +74,12 @@
 
     let buttmario = document.getElementById('buttmario');
     let buttwario = document.getElementById('buttwario');
+
+
+    let buttsupmario = document.getElementById('buttsupmario');
+    let buttsupwario = document.getElementById('buttsupwario');
+
+
 
 
     const display = function() {
@@ -81,6 +103,12 @@
         gameover();
 
     }
+    supattack = function(perso) {
+        perso.vie -= 20;
+        display();
+        gameover();
+    }
+
 
     let mario = {
         name: "Mario",
@@ -104,6 +132,16 @@
         attack(mario)
 
     });
+    buttsupwario.addEventListener("click", function() {
+        supattack(wario)
+    });
+
+    buttsupmario.addEventListener("click", function() {
+        supattack(mario)
+
+    });
+
+
 
     function gameover() {
         if (mario.vie <= 0 || wario.vie <= 0) {
@@ -112,6 +150,7 @@
         }
     }
 </script>
+
 
 </body>
 

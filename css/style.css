@@ -279,14 +279,14 @@
                                         }
                                         
                                         .gameover {
-                                            width: 942px;
-                                            height: 413px;
-                                            left: 218px;
-                                            top: 233px;
+                                            width: 122vh;
+                                            height: 57vh;
+                                            left: 21vh;
+                                            top: 42vh;
                                             position: absolute;
                                             z-index: 100;
                                             display: none;
-                                            padding-left: 173px;
+                                            padding-left: 46vh;
                                         }
                                         
                                         @keyframes blink {

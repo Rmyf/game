@@ -58,6 +58,15 @@
                                             border-radius: 10px;
                                         }
                                         
+                                        input {
+                                            background-color: red;
+                                            border-radius: 50px;
+                                            width: 40px;
+                                            height: 40px;
+                                            font-weight: bold;
+                                            font-size: 16px;
+                                        }
+                                        
                                         main {
                                             flex-grow: 1;
                                             display: flex;
@@ -71,7 +80,7 @@
                                             height: 164px;
                                             width: 500px;
                                             animation-name: wario123;
-                                            animation-duration: 1s;
+                                            animation-duration: 1.2s;
                                             animation-iteration-count: infinite;
                                             animation-timing-function: step-end;
                                             image-rendering: pixelated;
@@ -106,10 +115,11 @@
                                         .lightning {
                                             position: absolute;
                                             display: none;
-                                            top: 72%;
+                                            top: 75%;
                                             right: 16%;
                                             height: 104px;
                                             width: 100px;
+                                            transition: 0.5s;
                                         }
                                         
                                         .littlelightning {
@@ -118,14 +128,15 @@
                                             top: 75%;
                                             right: 15%;
                                             height: 104px;
-                                            width: 100px
+                                            width: 100px;
+                                            transition: 0.5s;
                                         }
                                         
                                         .persomario {
                                             height: 133px;
                                             width: 500px;
                                             animation-name: mario123;
-                                            animation-duration: 1s;
+                                            animation-duration: 0.8s;
                                             animation-iteration-count: infinite;
                                             animation-timing-function: step-end;
                                             image-rendering: pixelated;
@@ -163,17 +174,15 @@
                                             top: 78%;
                                             left: 16%;
                                             height: 104px;
-                                            width: 500px;
-                                            animation-name: ball;
+                                            width: 100px;
                                             animation-duration: 0.5s;
-                                            animation-iteration-count: infinite;
                                             animation-timing-function: step-end;
                                             /*image-rendering: pixelated;
-                    image-rendering: -o-crisp-edges;
-                    image-rendering: -webkit-optimize-constrast;
-                    image-rendering: -moz-crisp-edges;
-                    image-rendering: optimize-contrast;
-                    -ms-interpolation-mode: nearet-neighbor;*/
+                                            image-rendering: -o-crisp-edges;
+                                            image-rendering: -webkit-optimize-constrast;
+                                            image-rendering: -moz-crisp-edges;
+                                            image-rendering: optimize-contrast;
+                                            -ms-interpolation-mode: nearet-neighbor;*/
                                         }
                                         
                                         @keyframes ball {
@@ -184,28 +193,28 @@
                                                 background-size: 328px;
                                             }
                                             16.66% {
-                                                left: 30%;
+                                                left: 40%;
                                                 background-image: url("../images/mariofire.png");
                                                 background-position: 215px -1538px;
                                                 width: 103px;
                                                 background-size: 328px;
                                             }
                                             33.33% {
-                                                left: 40%;
+                                                left: 50%;
                                                 background-image: url("../images/mariofire.png");
                                                 background-position: 438px -1538px;
                                                 width: 109px;
                                                 background-size: 328px;
                                             }
                                             50% {
-                                                left: 50%;
+                                                left: 60%;
                                                 background-image: url("../images/mariofire.png");
                                                 background-position: -658px -1538px;
                                                 width: 110px;
                                                 background-size: 328px;
                                             }
                                             66.66% {
-                                                left: 60%;
+                                                left: 70%;
                                                 background-image: url("../images/mariofire.png");
                                                 background-position: 215px -1538px;
                                                 width: 103px;
@@ -213,81 +222,21 @@
                                             }
                                             83.31% {
                                                 left: 80%;
-                                                background-image: url("../images/malightningriofire.png");
+                                                background-image: url("../images/mariofire.png");
                                                 background-position: 438px -1538px;
                                                 width: 109px;
                                                 background-size: 328px;
                                             }
                                         }
-                                        /*.persomario {
-                    height: 133px;
-                    width: 500px;
-                    animation-name: marioattack;
-                    animation-duration: 1s;
-                    animation-iteration-count: infinite;
-                    animation-timing-function: step-end;
-                }*/
-                                        /*@keyframes marioattack {
-                    0% {
-                        background-image: url("../images/mario.png");
-                        background-position: -14957px -1200px;
-                        width: 150px;
-                        background-size: 1500px;
-                    }
-                    12.5% {
-                        background-image: url("../images/mario.png");
-                        background-position: -15097px -1204px;
-                        background-size: 1500px;
-                        width: 140px;
-                    }
-                    25% {
-                        background-image: url("../images/mario.png");
-                        background-position: -1722px -1403px;
-                        width: 130px;
-                        background-size: 1500px;
-                    }
-                    37.5% {
-                        background-image: url("../images/mario.png");
-                        background-position: -336px -1001px;
-                        width: 140px;
-                        background-size: 1500px;
-                    }
-                    50% {
-                        background-image: url("../images/mario.png");
-                        background-position: -469px -994px;
-                        width: 140px;
-                        background-size: 1500px;
-                    }   display: none;
-                    62.5% {
-                        background-image: url("../images/mario.png");
-                        background-position: -608px -174px;
-                        width: 140px;
-                        background-size: 1500px;
-                    }
-                    80% {
-                        background-image: url("../images/mario.png");
-                        background-position: -742px -177px;
-                        width: 140px;
-                        background-size: 1500px;
-                    }
-                    92.5% {
-                        background-image: url("../images/mario.png");
-                        background-position: -2388px -175px;
-                        width: 140px;
-                        background-size: 1500px;
-                    }0 auto;
-                    100% {}
-                }*/
                                         
                                         .littlefire {
+                                            display: none;
                                             position: absolute;
                                             top: 78%;
                                             left: 13%;
                                             height: 104px;
                                             width: 500px;
-                                            animation-name: fire;
                                             animation-duration: 0.5s;
-                                            animation-iteration-count: infinite;
                                             animation-timing-function: step-end;
                                         }
                                         
@@ -323,15 +272,21 @@
                                         
                                         h1.blink {
                                             position: absolute;
-                                            margin-top: 163px;
-                                            padding-left: 290px;
-                                            height: 70%;
-                                            width: 80%;
                                             font-family: pixel;
                                             color: black;
                                             font-size: 70px;
                                             animation: blink 2s infinite;
+                                        }
+                                        
+                                        .gameover {
+                                            width: 942px;
+                                            height: 413px;
+                                            left: 218px;
+                                            top: 233px;
+                                            position: absolute;
+                                            z-index: 100;
                                             display: none;
+                                            padding-left: 173px;
                                         }
                                         
                                         @keyframes blink {
@@ -348,17 +303,26 @@
                                             height: 50px;
                                         }
                                         
-                                        input {
-                                            background-color: red;
-                                            border-radius: 50px;
-                                            width: 40px;
-                                            height: 40px;
-                                            font-weight: bold;
-                                            font-size: 16px;
+                                        #buttmario {
+                                            position: absolute;
+                                            left: 277px;
+                                            bottom: 3px;
                                         }
                                         
-                                        .buttmario {
-                                            margin-right: 30px;
+                                        #buttsupmario {
+                                            position: absolute;
+                                            left: 225px;
+                                            bottom: 3px;
                                         }
                                         
-                                        .buttsupwario {}
+                                        #buttwario {
+                                            position: absolute;
+                                            right: 208px;
+                                            bottom: 3px;
+                                        }
+                                        
+                                        #buttsupwario {
+                                            position: absolute;
+                                            right: 260px;
+                                            bottom: 3px;
+                                        }

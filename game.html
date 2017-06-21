@@ -13,7 +13,7 @@
     <title>MarioGame</title>
 </head>
 
-<!--<audio src="sound/overworld.mp3" controls autoplay loop></audio>-->
+<audio src="sound/overworld.mp3" controls autoplay hidden loop></audio>
 
 <body>
 
@@ -43,9 +43,12 @@
     </div>
 
     <main>
-        <h1 class="blink">GAME OVER</h1>
-        <div class="persomario"></div>
 
+        <div class="gameover">
+            <h1 class="blink">GAME OVER</h1>
+        </div>
+
+        <div class="persomario"></div>
         <div class="persowario"></div>
 
     </main>
@@ -53,21 +56,12 @@
 
     <footer>
         <input id="buttmario" type="button" value="A">
-        <input id="buttsupwario" type="button" value="B">
-        <input id="buttwario" type="button" value="A">
         <input id="buttsupmario" type="button" value="B">
-
-
-
-
-
+        <input id="buttwario" type="button" value="A">
+        <input id="buttsupwario" type="button" value="B">
     </footer>
 
-
 </body>
-
-
-
 
 <script>
     "use strict";
@@ -103,7 +97,7 @@
         gameover();
 
     }
-    supattack = function(perso) {
+    const supattack = function(perso) {
         perso.vie -= 20;
         display();
         gameover();
@@ -126,18 +120,50 @@
 
     buttmario.addEventListener("click", function() {
         attack(wario)
+        document.querySelector(".littlefire").style.display = "block";
+
+        document.querySelector(".littlefire").style.animationName = "fire";
+        document.querySelector(".littlefire").addEventListener("animationend", function() {
+            document.querySelector(".littlefire").style.animationName = "";
+        })
+
+
     });
 
     buttwario.addEventListener("click", function() {
         attack(mario)
+        document.body.querySelector(".littlelightning").style.display = "block";
+        setTimeout(function() {
+            document.body.querySelector(".littlelightning").style.right = "80%";
+        }, 40);
+        document.querySelector(".littlelightning").addEventListener("transitionend", function() {
+            document.querySelector(".littlelightning").style.display = "none";
+            document.querySelector(".littlelightning").style.right = "15%";
+        })
 
     });
-    buttsupwario.addEventListener("click", function() {
-        supattack(wario)
-    });
+
 
     buttsupmario.addEventListener("click", function() {
+        supattack(wario)
+        document.querySelector(".fireball").style.display = "block";
+
+        document.querySelector(".fireball").style.animationName = "ball";
+        document.querySelector(".fireball").addEventListener("animationend", function() {
+            document.querySelector(".fireball").style.animationName = "";
+        })
+    });
+
+    buttsupwario.addEventListener("click", function() {
         supattack(mario)
+        document.body.querySelector(".lightning").style.display = "block";
+        setTimeout(function() {
+            document.body.querySelector(".lightning").style.right = "80%";
+        }, 40);
+        document.querySelector(".lightning").addEventListener("transitionend", function() {
+            document.querySelector(".lightning").style.display = "none";
+            document.querySelector(".lightning").style.right = "15%";
+        })
 
     });
 
@@ -145,7 +171,7 @@
 
     function gameover() {
         if (mario.vie <= 0 || wario.vie <= 0) {
-            document.querySelector(".blink").style.display = "flex";
+            document.querySelector(".gameover").style.display = "flex";
 
         }
     }

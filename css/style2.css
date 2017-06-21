@@ -17,7 +17,7 @@ header {
     text-decoration: none;
 }
 
-@keyframes blink {
+@keyframes gameover {
     50% {
         opacity: 0;
     }
@@ -31,5 +31,6 @@ a.blink {
 .menuimg {
     display: flex;
     justify-content: center;
-    margin-top: -30px;
+    margin-top: -5px;
+    margin-bottom: 40px;
 }
